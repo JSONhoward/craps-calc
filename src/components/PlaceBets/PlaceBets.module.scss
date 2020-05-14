@@ -51,9 +51,10 @@
 }
 
 .placeBet-odds {
+  text-align: center;
   color: yellow;
   font-size: small;
-  width: 30px;
+  width: 40px;
 }
 
 .placePairNumbers {
@@ -119,12 +120,4 @@
 
 .noBorderBottom {
   border-bottom: none;
-}
-
-@media only screen and (min-device-width: 421px) {
-  // tablets
-}
-
-@media only screen and (min-device-width: 769px) {
-  // desktop
 }
