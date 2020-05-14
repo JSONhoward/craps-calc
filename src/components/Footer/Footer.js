@@ -13,11 +13,9 @@ const Footer = () => {
                 <p id='copyright'>&copy; {YEAR} Craps Calc</p>
             </div>
             <div className={styles['footer-right']}>
-                <a rel='noopener noreferrer' target='_blank' href='http://www.github.com/JSONhoward/craps-calc'>
                     <FaGithub size={'2rem'} />
-                </a>
-                <a rel='noopener noreferrer' target='_blank' href='http://www.github.com/JSONhoward/craps-calc'>
-                    <p>Github Repo</p>
+                <a title='github repo' rel='noopener noreferrer' target='_blank' href='http://www.github.com/JSONhoward/craps-calc'>
+                    Github Repo
                 </a>
             </div>
         </div>
