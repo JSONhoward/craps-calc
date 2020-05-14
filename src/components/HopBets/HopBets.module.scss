@@ -1,0 +1,138 @@
+.HopBets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 2rem 0;
+}
+
+.HopBets button {
+  width: 75px;
+  margin: 10px 10px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.diceCombination {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.diceCombination img {
+  margin: 4px;
+  width: 4rem;
+  height: auto;
+  box-shadow: 3px 3px 5px black;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  display: flex;
+  height: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.propBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.propBox img {
+  width: 2rem;
+  height: auto;
+  margin: 1px;
+}
+
+.die-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  border: 2px solid yellow;
+}
+
+.noBorderBottom {
+  border-bottom: none;
+}
+
+.noBorderTop {
+  border-top: none;
+}
+
+.noBorderRight {
+  border-right: none;
+}
+
+.noBorderLeft {
+  border-left: none;
+}
+
+.die-box :last-child {
+  color: white;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px black;
+}
+
+.dice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.dice-images {
+  display: flex;
+  flex-direction: row;
+  margin: 0.25rem 1rem;
+}
+
+.moreHopBets {
+  width: 95vw;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.moreBets-line {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  p {
+    margin: 0.5rem;
+    font-size: larger;
+  }
+}
+
+.moreBetsDivider {
+  margin: 0.25rem 0;
+  border-top: 0.5px dotted yellow;
+  width: 90%;
+}

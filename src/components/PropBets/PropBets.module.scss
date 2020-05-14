@@ -1,0 +1,308 @@
+.PropBets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 50px);
+  width: 100vw;
+  overflow-x: hidden;
+  p {
+    font-size: large;
+  }
+  padding-top: 2rem;
+}
+
+.PropBets button {
+  font-size: large;
+}
+
+#place {
+  width: 35%;
+  max-width: 200px;
+  height: 3rem;
+  text-align: center;
+  border: 3px solid yellow;
+  margin: 1rem;
+  padding: 0 1px;
+}
+
+.crapNumbers {
+  display: flex;
+  flex-direction: row;
+}
+
+.crapNumbers button {
+  width: 75%;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.crapNumbersLeft,
+.crapNumbersRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crapNumbers img {
+  width: 3rem;
+  height: auto;
+  margin: 0.125rem;
+}
+
+.craps2,
+.craps3,
+.craps11,
+.craps12 {
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  filter: grayscale(50%)
+}
+
+.craps2-selected,
+.craps3-selected,
+.craps11-selected,
+.craps12-selected {
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 2px solid yellow;
+}
+
+.propsBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 1rem;
+}
+
+.propPays {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  width: 15rem;
+}
+
+.twoTwelve,
+.threeEleven {
+  display: flex;
+  flex-direction: row;
+}
+
+.crapTwoTwelve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 7.5rem;
+  width: 7.5rem;
+  border: 2px solid yellow;
+  margin: 0;
+}
+
+.crapThreeEleven {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  height: 7.5rem;
+  width: 7.5rem;
+  border: 2px solid yellow;
+  margin: 0;
+}
+
+.dice2 {
+  display: flex;
+  flex-direction: row;
+  margin: 0rem;
+  img {
+    width: 2rem;
+    height: auto;
+    margin: 0.25rem;
+  }
+}
+
+.dice12 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0rem;
+  img {
+    width: 2rem;
+    height: auto;
+    margin: 0.25rem;
+  }
+}
+.dice3 {
+  display: flex;
+  flex-direction: row;
+  margin: 0rem;
+  img {
+    width: 2rem;
+    height: auto;
+    margin: 0.25rem;
+  }
+}
+.dice11 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0rem;
+  img {
+    width: 2rem;
+    height: auto;
+    margin: 0.25rem;
+  }
+}
+
+.pays2 {
+  align-self: flex-start;
+  color: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-shadow: 1px 1px 3px black;
+  font-weight: bold;
+}
+
+.pays12 {
+  align-self: flex-end;
+  color: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-shadow: 1px 1px 3px black;
+  font-weight: bold;
+}
+
+.horn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7em;
+  width: 7rem;
+  border: 2px solid yellow;
+  background-color: #489A35;
+  font-weight: bold;
+  margin: 0;
+  z-index: 1;
+}
+
+.horn p {
+  margin-top: 0.5rem;
+  font-size: large;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  font-weight: bold;
+}
+
+.horn :first-child {
+  color: #9c2b1f;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.anyCrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 15rem;
+  border-bottom: 2px solid yellow;
+  border-left: 2px solid yellow;
+  border-right: 2px solid yellow;
+  color: #9c2b1f;
+  font-weight: bold;
+}
+
+.anyCrap :nth-child(2) {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px black;
+}
+
+.propPays-odds {
+  color: yellow;
+}
+
+.oddsLeft {
+  position: absolute;
+  left: 2px;
+  color: yellow;
+}
+
+.oddsRight {
+  position: absolute;
+  right: 2px;
+  color: yellow;
+}
+
+.moreBets {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.crapsEleven,
+.hornHigh2,
+.hornHigh3,
+.hornHigh11,
+.hornHigh12 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  p {
+    margin: 0.5rem;
+    font-size: larger;
+  }
+}
+
+.morePays {
+  position: absolute;
+  right: 2px;
+  display: flex;
+  color: white;
+}
+
+.hornHigh3 :last-child {
+  color: white;
+}
+
+.hornHigh11 :last-child {
+  color: white;
+}
+
+.hornHigh12 :last-child {
+  color: white;
+}
+
+.moreBetsDivider {
+  margin: 0.25rem 0;
+  border-top: 0.5px dotted yellow;
+  width: 90%;
+}
+
+.noBorderBottom {
+  border-bottom: none;
+}
+
+.noBorderRight {
+  border-right: none;
+}

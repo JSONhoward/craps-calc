@@ -1,0 +1,79 @@
+.NavBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  width: 100vw;
+  background-color: #812e00;
+  box-shadow: 0px 0px 5px black;
+  margin: 0px;
+}
+
+.logo {
+  display: flex;
+  flex: 2;
+}
+
+h1 {
+  color: white;
+  margin-left: 5vw;
+}
+
+.hamburger {
+  margin-right: 5vw;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.top-menu {
+  display: none;
+  flex: .5;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 55px;
+  right: 5px;
+  padding: 1rem;
+  color: white;
+  background-color: #812e00;
+  box-shadow: 0px 2px 5px black;
+  animation: fadeIn 0.25s linear;
+  z-index: 5;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    right: -100px;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  margin: 5px 5px;
+  font-size: x-large;
+}
+
