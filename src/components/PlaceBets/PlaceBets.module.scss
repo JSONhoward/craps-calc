@@ -23,11 +23,19 @@
 .buyCheckbox {
   display: flex;
   flex-direction: row;
-  width: 150px;
-  padding: 0;
+  height: 2rem;
+  width: 300px;
   align-items: center;
   justify-content: space-around;
   font-style: italic;
+  padding: 0 3.5rem;
+  p {
+    width: 100%;
+  }
+}
+
+.buyCheckbox input {
+ margin: 1rem 0rem 1rem 1rem;
 }
 
 .placePays {

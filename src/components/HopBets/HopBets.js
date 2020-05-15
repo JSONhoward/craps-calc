@@ -224,7 +224,7 @@ const HopBets = () => {
                             <p>15 to 1</p>
                             <p>Pays ${dicePays.sixtyFour}</p>
                         </div>
-                        <div className={[styles['die-box'], styles.snoBorderTop].join(' ')}>
+                        <div className={[styles['die-box'], styles.noBorderTop].join(' ')}>
                             <div className={styles['dice-images']}>
                                 <img alt='dice 5' src={dice5} />
                                 <img alt='dice 5' src={dice5} />

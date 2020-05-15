@@ -24,6 +24,8 @@ input {
   height: 3rem;
   width: 8rem;
   font-size: xx-large;
+  border-radius: 5px;
   font-weight: bold;
   margin-bottom: 1rem;
+  padding-left: 1.25rem;
 }
