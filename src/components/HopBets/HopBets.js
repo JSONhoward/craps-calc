@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 import styles from './HopBets.module.scss'
 import dice1 from '../../images/dice1.png'
@@ -27,9 +27,9 @@ const HopBets = () => {
         setDicePays(pays)
     }
 
-    const handleBet = (event) => {
+    const handleBet = event => {
         let betAmount = event.target.value
-        if(betAmount.length < 5) {
+        if (betAmount.length < 5) {
             setBet(betAmount)
         }
     }
@@ -90,20 +90,20 @@ const HopBets = () => {
                 <div className={styles.diceCombination}>
                     <div className={styles.arrows}>
                         <div className={styles['arrow-icon']} onClick={() => handleDiceUp(1)}>
-                            <FaArrowCircleUp size={"1.5rem"} />
+                            <FaArrowCircleUp className={styles.arrowShadow} size={"1.5rem"} />
                         </div>
                         <div className={styles['arrow-icon']} onClick={() => handleDiceDown(1)}>
-                            <FaArrowCircleDown size={"1.5rem"} />
+                            <FaArrowCircleDown className={styles.arrowShadow} size={"1.5rem"} />
                         </div>
                     </div>
                     <img alt='a die' src={diceArray[die]} />
                     <img alt='a die' src={diceArray[die2]} />
                     <div className={styles.arrows}>
                         <div className={styles['arrow-icon']} onClick={() => handleDiceUp(2)}>
-                            <FaArrowCircleUp size={"1.5rem"} />
+                            <FaArrowCircleUp className={styles.arrowShadow} size={"1.5rem"} />
                         </div>
                         <div className={styles['arrow-icon']} onClick={() => handleDiceDown(2)}>
-                            <FaArrowCircleDown size={"1.5rem"} />
+                            <FaArrowCircleDown className={styles.arrowShadow} size={"1.5rem"} />
                         </div>
                     </div>
                 </div>

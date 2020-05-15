@@ -22,9 +22,9 @@ const Home = () => {
                     <p>calculate payouts for all major craps bets</p>
                 </div>
                 <div className={styles['nav-buttons']}>
-                    <button onClick={() => history.push('/placebets')}>Place Bets</button>
-                    <button onClick={() => history.push('/propbets')}>Props Bets</button>
-                    <button onClick={() => history.push('/hopbets')}>Hop bets</button>
+                    <button id='placebets' onClick={() => history.push('/placebets')}>Place Bets</button>
+                    <button id='propbets' onClick={() => history.push('/propbets')}>Props Bets</button>
+                    <button id='hopbets' onClick={() => history.push('/hopbets')}>Hop bets</button>
                 </div>
             </div>
         </>

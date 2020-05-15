@@ -1,16 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 import styles from './NavBar.module.scss'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-const NavBar = () => {
-    const [menuToggle, setMenuToggle] = useState(false)
-
-    const handleMenuToggle = () => {
-        setMenuToggle(!menuToggle)
-    }
-
+const NavBar = ({menuToggle, handleMenuToggle}) => {
     return (
         <div className={styles.NavBar}>
             <div className='logo'>

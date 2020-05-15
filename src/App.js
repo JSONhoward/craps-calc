@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,10 +14,23 @@ import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
+    const [menuToggle, setMenuToggle] = useState(false)
+
+    const handleClose = event => {
+        let id = event.target.id
+        if(menuToggle && id !== 'menu' && id !== 'placebets' && id !== 'propbets' && id !== 'hopbets') {
+            setMenuToggle(!menuToggle)
+        }
+    }
+
+    const handleMenuToggle = () => {
+        setMenuToggle(!menuToggle)
+    }
+
     return (
-        <div className={styles.App}>
+        <div onClick={(event) => handleClose(event)} className={styles.App}>
             <Router>
-            <NavBar />
+            <NavBar handleMenuToggle={handleMenuToggle} menuToggle={menuToggle} />
                 <Switch>
                         <Route path='/' exact component={Home} />
                         <Route path='/placebets' component={PlaceBets} />

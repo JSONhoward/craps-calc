@@ -21,6 +21,9 @@ code {
 
 input {
   text-align: center;
-  height: 2rem;
-  font-size: x-large;
+  height: 3rem;
+  width: 8rem;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }

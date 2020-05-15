@@ -26,47 +26,48 @@ export const diceNumbers = {
 }
 
 export function payouts() {
-    const coverOneLowSide = bet => bet * 15
-    const coverOneHighSide = bet => bet * 30
-    const coverTwoLowSide = bet => bet * 7
-    const coverTwoHighSide = bet => Math.floor((bet * .5) * 30 - (bet * .5))
-    const coverThreeLowSide = bet => Math.floor((bet * (1 / 3)) * 15 - (bet * (2 / 3)))
-    const coverThreeHighSide = bet => Math.floor((bet * (1 / 3)) * 30 - (bet * (2 / 3)))
-    const coverFourLowSide = bet => bet * 3
-    const coverFourHighSide = bet => Math.floor((bet * .25) * 30 - (bet * .75))
-    const coverSixLowSide = bet => Math.floor((bet * (1 / 6)) * 10)
-    const coverSixHighSide = bet => Math.floor((bet * (1 / 6)) * 30 - (bet * (5 / 6)))
-
-
     return (die1, die2, bet) => {
+        let coverOneLowSide = bet * 15,
+         coverOneHighSide = bet * 30,
+         coverTwoLowSide = bet * 7,
+         coverTwoHighSide = Math.floor((bet * .5) * 30 - (bet * .5)),
+         coverThreeLowSide = Math.floor((bet * (1 / 3)) * 15 - (bet * (2 / 3))),
+         coverThreeHighSide = Math.floor((bet * (1 / 3)) * 30 - (bet * (2 / 3))),
+         coverFourLowSide = bet * 3,
+         coverFourHighSide = Math.floor((bet * .25) * 30 - (bet * .75)),
+         coverSixLowSide = Math.floor((bet * (1 / 6)) * 10),
+         coverSixHighSide = Math.floor((bet * (1 / 6)) * 30 - (bet * (5 / 6)))
+
         if ((die1 === 0 && die2 === 2) || (die1 === 2 && die2 === 0)) {
-            return { ...diceNumbers, thirtyOne: coverOneLowSide(bet), fours: coverTwoLowSide(bet), foursTens: coverFourLowSide(bet) }
+            return { ...diceNumbers, thirtyOne: coverOneLowSide, fours: coverTwoLowSide, foursTens: coverFourLowSide }
         } else if (die1 === 1 && die2 === 1) {
-            return { ...diceNumbers, twentyTwo: coverOneHighSide(bet), fours: coverTwoHighSide(bet), foursTens: coverFourHighSide(bet), hardWays: coverFourHighSide(bet) }
+            return { ...diceNumbers, twentyTwo: coverOneHighSide, fours: coverTwoHighSide, foursTens: coverFourHighSide, hardWays: coverFourHighSide }
         } else if ((die1 === 0 && die2 === 3) || (die1 === 3 && die2 === 0)) {
-            return { ...diceNumbers, fortyOne: coverOneLowSide(bet), fives: coverTwoLowSide(bet), fivesNines: coverFourLowSide(bet) }
+            return { ...diceNumbers, fortyOne: coverOneLowSide, fives: coverTwoLowSide, fivesNines: coverFourLowSide }
         } else if ((die1 === 1 && die2 === 2) || (die1 === 2 && die2 === 1)) {
-            return { ...diceNumbers, thirtyTwo: coverOneLowSide(bet), fives: coverTwoLowSide(bet), fivesNines: coverFourLowSide(bet) }
+            return { ...diceNumbers, thirtyTwo: coverOneLowSide, fives: coverTwoLowSide, fivesNines: coverFourLowSide }
         } else if ((die1 === 0 && die2 === 4) || (die1 === 4 && die2 === 0)) {
-            return { ...diceNumbers, fiftyOne: coverOneLowSide(bet), sixes: coverThreeLowSide(bet), sixesEights: coverSixLowSide(bet) }
+            return { ...diceNumbers, fiftyOne: coverOneLowSide, sixes: coverThreeLowSide, sixesEights: coverSixLowSide }
         } else if ((die1 === 1 && die2 === 3) || (die1 === 3 && die2 === 1)) {
-            return { ...diceNumbers, fortyTwo: coverOneLowSide(bet), sixes: coverThreeLowSide(bet), sixesEights: coverSixLowSide(bet) }
+            return { ...diceNumbers, fortyTwo: coverOneLowSide, sixes: coverThreeLowSide, sixesEights: coverSixLowSide }
         } else if (die1 === 2 && die2 === 2) {
-            return { ...diceNumbers, thirtyThree: coverOneHighSide(bet), sixes: coverThreeHighSide(bet), sixesEights: coverSixHighSide(bet), hardWays: coverFourHighSide(bet) }
+            return { ...diceNumbers, thirtyThree: coverOneHighSide, sixes: coverThreeHighSide, sixesEights: coverSixHighSide, hardWays: coverFourHighSide }
         } else if ((die1 === 1 && die2 === 5) || (die1 === 5 && die2 === 1)) {
-            return { ...diceNumbers, sixtyTwo: coverOneLowSide(bet), eights: coverThreeLowSide(bet), sixesEights: coverSixLowSide(bet) }
+            return { ...diceNumbers, sixtyTwo: coverOneLowSide, eights: coverThreeLowSide, sixesEights: coverSixLowSide }
         } else if ((die1 === 2 && die2 === 4) || (die1 === 4 && die2 === 2)) {
-            return { ...diceNumbers, fiftyThree: coverOneLowSide(bet), eights: coverThreeLowSide(bet), sixesEights: coverSixLowSide(bet) }
+            return { ...diceNumbers, fiftyThree: coverOneLowSide, eights: coverThreeLowSide, sixesEights: coverSixLowSide }
         } else if (die1 === 3 && die2 === 3) {
-            return { ...diceNumbers, fortyFour: coverOneHighSide(bet), eights: coverThreeHighSide(bet), sixesEights: coverSixHighSide(bet), hardWays: coverFourHighSide(bet) }
+            return { ...diceNumbers, fortyFour: coverOneHighSide, eights: coverThreeHighSide, sixesEights: coverSixHighSide, hardWays: coverFourHighSide }
         } else if ((die1 === 2 && die2 === 5) || (die1 === 5 && die2 === 2)) {
-            return { ...diceNumbers, sixtyThree: coverOneLowSide(bet), nines: coverTwoLowSide(bet), fivesNines: coverFourLowSide(bet) }
+            return { ...diceNumbers, sixtyThree: coverOneLowSide, nines: coverTwoLowSide, fivesNines: coverFourLowSide }
         } else if ((die1 === 3 && die2 === 4) || (die1 === 4 && die2 === 3)) {
-            return { ...diceNumbers, fiftyFour: coverOneLowSide(bet), nines: coverTwoLowSide(bet), fivesNines: coverFourLowSide(bet) }
+            return { ...diceNumbers, fiftyFour: coverOneLowSide, nines: coverTwoLowSide, fivesNines: coverFourLowSide }
         } else if ((die1 === 3 && die2 === 5) || (die1 === 5 && die2 === 3)) {
-            return { ...diceNumbers, sixtyFour: coverOneHighSide(bet), tens: coverTwoLowSide(bet), foursTens: coverFourLowSide(bet) }
+            return { ...diceNumbers, sixtyFour: coverOneHighSide, tens: coverTwoLowSide, foursTens: coverFourLowSide }
         } else if (die1 === 4 && die2 === 4) {
-            return { ...diceNumbers, fiftyFive: coverOneHighSide(bet), tens: coverTwoHighSide(bet), foursTens: coverFourHighSide(bet), hardWays: coverFourHighSide(bet) }
+            return { ...diceNumbers, fiftyFive: coverOneHighSide, tens: coverTwoHighSide, foursTens: coverFourHighSide, hardWays: coverFourHighSide }
+        } else {
+            return { ...diceNumbers }
         }
     }
 }
