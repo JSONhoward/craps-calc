@@ -34,16 +34,16 @@ const PropBets = () => {
     const [crapsEleven, setCrapsEleven] = useState(0)
 
     const handleBet = event => {
-        let bet = event.target.value
+        const bet = Math.abs(+event.target.value)
 
-        if (bet.length < 5) {
+        if (bet < 1e4) {
             setBet(bet)
             setCrapSelect({})
         }
     }
 
     const handleButton = event => {
-        let roll = event.target.name
+        const roll = event.target.name
 
         setCrapSelect({ [roll]: true })
         getPayouts(Number(roll))

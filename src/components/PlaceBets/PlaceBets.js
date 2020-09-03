@@ -13,11 +13,10 @@ const PlaceBets = () => {
     const [buy4and10, setBuy4and10] = useState(false)
 
     const handleBet = (event) => {
-        let bet = event.target.value
+        const bet = Math.abs(+event.target.value)
 
-        if (bet.length < 6) {
+        if (bet < 1e5) {
             setBet(bet)
-
             setFourTen(outsideEven(bet))
             setFiveNine(odd(bet))
             setSixEight(insideEven(bet))
@@ -25,17 +24,14 @@ const PlaceBets = () => {
         }
     }
 
-    const handleCheckbox = event => {
-        let buy = !buy4and10
-        setBuy4and10(buy)
-    }
+    const handleCheckbox = event => setBuy4and10(prev => !prev)
 
     return (
         <div className={styles.PlaceBets}>
             <Helmet>
                 <title>Craps Calc | Place Bets</title>
             </Helmet>
-            <input max={9999} value={bet} type='number' name='place' id='place' onChange={handleBet} />
+            <input max={9999} value={bet} type='number' name='place' id='place-input' onChange={handleBet} />
             <div className={styles.buyCheckbox}>
                 <input type='checkbox' name='buy4and10' value={buy4and10} id='buy4and10' onChange={handleCheckbox} />
                 <p>Buy 4 and 10?</p>

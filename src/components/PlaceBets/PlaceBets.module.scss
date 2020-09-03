@@ -9,16 +9,10 @@
   padding-top: 2rem;
 }
 
-#place {
-  width: 35%;
-  max-width: 200px;
-  height: 3rem;
-  font-size: 3rem;
-  text-align: center;
-  border: 3px solid yellow;
-  margin: 1rem;
-  padding: 0 1px;
+.PlaceBets input {
+  border: none;
 }
+
 
 .buyCheckbox {
   display: flex;
@@ -36,6 +30,11 @@
 
 .buyCheckbox input {
  margin: 1rem 0rem 1rem 1rem;
+ width: 2rem;
+}
+
+.buyCheckbox p {
+  margin-left: .5rem;
 }
 
 .placePays {

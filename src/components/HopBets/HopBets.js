@@ -23,15 +23,14 @@ const HopBets = () => {
     const getPayouts = payouts()
 
     const handlePays = () => {
-        let pays = getPayouts(die, die2, bet)
+        const pays = getPayouts(die, die2, bet)
         setDicePays(pays)
     }
 
     const handleBet = event => {
-        let betAmount = event.target.value
-        if (betAmount.length < 5) {
-            setBet(betAmount)
-        }
+        const betAmount = Math.abs(+event.target.value)
+
+        betAmount < 1e4 && setBet(betAmount)
     }
 
     const handleDiceUp = dieNum => {
@@ -40,16 +39,14 @@ const HopBets = () => {
                 if (die >= 5) {
                     setDie(0)
                 } else {
-                    let currentNum = die + 1
-                    setDie(currentNum)
+                    setDie(prev => prev + 1)
                 }
                 break
             case 2:
                 if (die2 >= 5) {
                     setDie2(0)
                 } else {
-                    let currentNum = die2 + 1
-                    setDie2(currentNum)
+                    setDie2(prev => prev + 1)
                 }
                 break
             default:
@@ -63,16 +60,14 @@ const HopBets = () => {
                 if (die <= 0) {
                     setDie(5)
                 } else {
-                    let currentNum = die - 1
-                    setDie(currentNum)
+                    setDie(prev => prev - 1)
                 }
                 break
             case 2:
                 if (die2 <= 0) {
                     setDie2(5)
                 } else {
-                    let currentNum = die2 - 1
-                    setDie2(currentNum)
+                    setDie2(prev => prev - 1)
                 }
                 break
             default:

@@ -17,7 +17,7 @@ const App = () => {
     const [menuToggle, setMenuToggle] = useState(false)
 
     const handleClose = event => {
-        let id = event.target.id
+        const id = event.target.id
         if(menuToggle && id !== 'menu' && id !== 'placebets' && id !== 'propbets' && id !== 'hopbets') {
             setMenuToggle(!menuToggle)
         }
